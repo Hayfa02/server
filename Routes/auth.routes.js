@@ -2,19 +2,19 @@ const express = require('express');
 const router = express.Router();
 const Auth = require("../middlewares/auth");
 const AdminAuth = require("../middlewares/adminAuth");
-const authControllerr = require("../controllers/authController");
-router.post('/signup',authControllerr.signup)
-router.post('/signin',authControllerr.signin)
-router.post('/email',authControllerr.findByEmail)
-router.post('/signout',Auth,authControllerr.signout)
-router.get('/confirmEmail/:token',authControllerr.confirmEmail)
-router.post('/forgot-password',authControllerr.forgotPassword)
-router.post('/reset-password',authControllerr.resetPassword)
-router.post('/change-password',Auth,authControllerr.changePassword)
-router.post('/add-phone-number',Auth,authControllerr.addPhoneNumber)
-router.post('/verif-phone-number',Auth,authControllerr.verifPhoneNumber)
-router.post('/disableAccount',AdminAuth,authControllerr.disableUsersAccount)
-router.post('/activateAccount',AdminAuth,authControllerr.activateUsersAccount)
-router.post('/users',AdminAuth,authControllerr.getAllUsers)
-router.post('/upload',authControllerr.upload)
+const authController = require("../Controllers/authController");
+router.post('/signup',authController.signup)
+router.post('/signin',authController.signin)
+router.post('/email',authController.findByEmail)
+router.post('/signout',Auth,authController.signout)
+router.get('/confirmEmail/:token',authController.confirmEmail)
+router.post('/forgot-password',authController.forgotPassword)
+router.post('/reset-password',authController.resetPassword)
+router.post('/change-password',Auth,authController.changePassword)
+router.post('/add-phone-number',Auth,authController.addPhoneNumber)
+router.post('/verif-phone-number',Auth,authController.verifPhoneNumber)
+router.post('/disableAccount',AdminAuth,authController.disableUsersAccount)
+router.post('/activateAccount',AdminAuth,authController.activateUsersAccount)
+router.post('/users',AdminAuth,authController.getAllUsers)
+router.post('/upload',authController.upload)
 module.exports = router
