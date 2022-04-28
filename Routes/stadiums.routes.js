@@ -3,7 +3,7 @@ const router = express.Router();
 const Auth = require("../middlewares/auth");
 const ownerAuth = require("../middlewares/ownerAuth");
 const AdminAuth = require("../middlewares/adminAuth");
-const StadiumController = require("../controllers/stadiumController");
+const StadiumController = require("../Controllers/stadiumController");
 router.get('/all',StadiumController.getAllStadiums)
 router.post('/add',ownerAuth,StadiumController.AddStadium)
 router.post('/id',StadiumController.getStadiumById)
