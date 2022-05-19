@@ -11,11 +11,7 @@ pipeline {
         }
       }
       
-             stage("slack") {
-        steps {
-          slackSend  color: 'good' ,  message:  'Test message...'
-        }
-      }
+ 
     
       
     }
