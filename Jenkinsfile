@@ -6,6 +6,14 @@ pipeline {
           slackSend  color: 'good' ,  message:  'Test message...'
         }
       }
+      
+       stage("build") {
+        steps {
+          sh ' npm install'
+          sh ' npm start'
+          
+        }
+      }
     
       
     }
