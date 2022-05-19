@@ -6,7 +6,7 @@ pipeline {
       stage("build") {
         steps {
           sh 'npm install'
-          sh ' code . '
+          sh ' npm start '
           }
         }
         
