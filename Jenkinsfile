@@ -27,7 +27,7 @@ pipeline {
       
          stage("slack") {
         steps {
-          slackSend message 'Test message...'
+          slackSend message: 'Test message...'
         }
       }
     
