@@ -13,6 +13,9 @@ pipeline {
         stage("Build") {
          steps {
            sh 'npm install'
+           sh 'npm run start '
+
+             
            sh 'pm2 restart all'
            sh 'exit'
 /*
