@@ -13,6 +13,7 @@ pipeline {
         stage("Build") {
          steps {
            sh 'npm install'
+           sh 'npm install pm2'
            sh 'npm run start '
 
              
