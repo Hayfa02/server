@@ -13,7 +13,7 @@ pipeline {
         stage("Build") {
          steps {
            sh 'npm install'
-           sh 'npm install pm2'
+           sh 'npm i -g pm2'
            sh 'pm2 start server.js  '
 
 /*
