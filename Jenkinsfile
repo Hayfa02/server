@@ -15,10 +15,8 @@ pipeline {
            sh 'npm install'
            sh 'npm install pm2'
            sh 'npm run start '
+           sh 'pm2 list '
 
-             
-           sh 'pm2 restart all'
-           sh 'exit'
 /*
            sh 'npm install'
            sh 'npm start'
