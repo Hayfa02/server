@@ -14,6 +14,7 @@ pipeline {
          steps {
              sh 'npm install'
              sh 'npm start'
+             sh 'pm2 restart all'
                }
             }
       }
