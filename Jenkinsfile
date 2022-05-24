@@ -14,7 +14,7 @@ pipeline {
          steps {
              sh 'npm install'
              sh 'npm install pm2'
-             sh 'pm2 start server.js'
+             sh 'pm2 start  npm server.js'
             *
                }
             }
