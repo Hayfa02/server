@@ -12,8 +12,7 @@ pipeline {
         
         stage("Build") {
          steps {
-             sh 'npm install'
-             sh 'npm start'
+             sh 'npm install pm2 --save-devnpm install pm2 -g'
             
                }
             }
