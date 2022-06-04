@@ -10,11 +10,11 @@ pipeline {
         }
      
         
-        stage("Build") {
-         steps {
-            
-               }
-            }
+          stage('Docker Build') {
+          steps {
+            sh 'docker build -t contnode .'
+      }
+    }
       }
 }
          
