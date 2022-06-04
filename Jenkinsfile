@@ -20,7 +20,9 @@ pipeline {
           
           stage(' image  container') {
              steps {
-               sh 'docker images'
+               sh 'docker image rm 411991af0152'
+               sh 'docker image rm eb6b3606b7a6'
+
       }
     }
           
