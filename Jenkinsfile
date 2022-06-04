@@ -12,6 +12,7 @@ pipeline {
         
           stage('Docker Build') {
           steps {
+            sh 'npm install'
             sh 'docker build -t contnode .'
       }
     }
