@@ -12,7 +12,7 @@ pipeline {
         
           stage('Docker Build') {
               steps {
-               sh 'sudo -S chmod 666 /var/run/docker.sock'
+               sh 'sudo su chmod 666 /var/run/docker.sock'
                sh 'docker build -t contnode .'
       }
     }
